@@ -1,40 +1,35 @@
 
-# Créer des styles bibliographiques CSL
+# Zotero : contribuez! Créer des styles bibliographiques CSL
 
 ## Objectifs
 
-1. Connaître le fonctionnement d'un style CSL et les outils d'édition disponibles
-2. Personnaliser un style bibliographique en apportant des modifications mineures à un style existant
-3. Acquérir les bases pour créer un style bibliographique correspondant aux consignes de rédaction d'une revue ou de son domaine de recherche
+A la fin de cet atelier, vous aurez créé un style bibliographique simple, en apportant quelques modifications à un style existant.
+
+Après un rappel concernant les styles bibliographiques et leur rôle dans la rédaction bibliographique, nous aborderons de façon détaillée la structure d'un style CSL. Nous passerons également en revue les outils et ressources utiles pour créer un style CSL. Au cours de la partie pratique de création d'un style, nous verrons les différents types de modification qui peuvent être apportés à un fichier de style CSL, du simple changement de la valeur d'un attribut à la création d'une commande de mise en forme conditionnelle.
 
 ## Sommaire
 
-🗓️ Programme de la journée :
-
-* points 1 à 6 le matin,
-* points 7 à 11 l'après-midi,
-
-incluant une pause ☕, 🍵 ou 🍹 pour chaque demi-journée.
-
 <!-- MDTOC maxdepth:1 firsth1:0 numbering:0 flatten:0 bullets:1 updateOnSave:0 -->
 
+- [Objectifs](#objectifs)   
 - [Sommaire](#sommaire)   
-- [1. Introduction](#1-introduction)   
-- [2. Principes généraux de CSL](#2-principes-généraux-de-csl)   
-- [3. Structure d’un style CSL](#3-structure-d’un-style-csl)   
-- [4. Les outils](#4-les-outils)   
-- [5. L'éditeur de styles Zotero](#5-léditeur-de-styles-zotero)   
-- [6. Modifier un style, macro simple](#6-modifier-un-style-macro-simple)   
-- [7. Modifier un style, macro conditionnelle](#7-modifier-un-style-macro-conditionnelle)   
-- [8. Les différents types de condition](#8-les-différents-types-de-condition)   
-- [9. Les appels de citation et les notes, l'élément `citation`](#9-les-appels-de-citation-et-les-notes-lélément-citation)   
-- [10. La bibliographie](#10-la-bibliographie)   
-- [11. Miscellanées](#11-miscellanées)   
+- [1-Introduction, rappels concernant Zotero](#1-introduction-rappels-concernant-zotero)   
+- [2-Rappels concernant les styles](#2-rappels-concernant-les-styles)   
+- [3-Structure d’un style CSL](#3-structure-d’un-style-csl)   
+- [4-Ressources et outils pour la partie pratique](#4-ressources-et-outils-pour-la-partie-pratique)   
+- [5-Installer un style créé avec l'éditeur de style Zotero](#5-installer-un-style-créé-avec-léditeur-de-style-zotero)   
+- [6-Modifier une macro simple](#6-modifier-une-macro-simple)   
+- [7-Focus sur les noms](#7-focus-sur-les-noms)   
+- [8-Modifier une macro conditionnelle](#8-modifier-une-macro-conditionnelle)   
+- [9-Focus sur les différents types de condition](#9-focus-sur-les-différents-types-de-condition)   
+- [10-Les appels de citation et les notes](#10-les-appels-de-citation-et-les-notes)   
+- [11-La bibliographie](#11-la-bibliographie)   
+- [12-Miscellanées](#12-miscellanées)   
 
 <!-- /MDTOC -->
 <div style="page-break-after: always;"></div>
 
-## 1. Introduction
+## 1-Introduction, rappels concernant Zotero
 
 Pour davantage de détails concernant les rappels 1 à 4 ci-dessous, consultez le support de la formation Urfist Bordeaux [Gérer facilement sa bibliographie avec Zotero](https://github.com/fflamerie/zotero_gerer_biblio).
 
@@ -49,109 +44,7 @@ Un usage inapproprié des outils de rédaction peut être une autre source d'ano
 
 [Documentation Zotero : Utiliser le module Zotero pour Word](https://docs.zotero-fr.org/word_processor_plugin_usage)
 
-### Rappel 4, les types de style
-
-Un style bibliographique définit la façon dont les éléments bibliographiques d’un document :
-
-*   appels de citation,
-*   **notes** si applicable,
-*   **bibliographie**,
-
-doivent être organisés et mis en forme.
-
-On distingue différents types de style bibliographiques, correspondant à des formats de style Zotero différents. On trouve ainsi dans [l'entrepôt des styles Zotero](https://www.zotero.org/styles), plus de 10'000 styles regroupés en 2 grands ensembles :
-
-*   les styles _**in-text**_, dans lesquels un appel de citation dans le texte renvoie à une entrée de la bibliographie,
-*   les styles _**note**_, dans lesquels un marqueur (symbole, nombre, etc.) pointe vers une note de bas de page ou de fin, qui permet d’identifier le document cité.
-
-_Chaque type de style a sa logique propre, il peut être tentant de les mélanger, mais cela peut (souvent) aboutir à un résultat incohérent ou difficile à comprendre._
-
-#### Les styles _in-text_
-##### Les styles numériques
-Dans le texte : chaque référence citée est appelée par un **numéro**.
-
->Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">[21, 22]</span>.
-
-Dans la bibliographie : les références sont classées par **ordre d’apparition dans le texte**.
-
-><span style="color:#0000CD;">21\.</span> Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
->
-><span style="color:#0000CD;">22\.</span> van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
-
-##### Les styles numériques composites
-Les styles numériques composites, dans lesquels une entrée bibliographique peut contenir plusieurs références, sont très utilisés en chimie.
-
-**Ce type de style n'est pas pris en charge par CSL.**
-
-Dans le texte :
-
->Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(1)</span>
-
-Dans la bibliographie :
-
-><span style="color:#0000CD;">1\. a)</span> Zwart KB, et al. (1983) Antonie van Leeuwenhoek 49: 369-385, <span style="color:#0000CD;">b)</span> van der Klei IJ, et al. (1991) Arch Microbiol 156: 15-23.
-
-##### Les styles auteur et auteur-date
-Dans le texte : chaque référence citée est appelée par le **nom de l'auteur** ou **le nom de l'auteur et la date de publication**.
-
-> Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al. 1991; Zwart et al. 1983)</span>
->
->Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al.; Zwart et al.)</span></cite>
-
-Dans la bibliographie : les références sont classées par **ordre alphabétique d'auteur**.
-
->van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
->
->Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
-
-##### Les styles _label_
-Dans le texte : chaque référence citée est appelée par un **code**.
-
->Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">[ZwVH1983; vaHV1991]</span>.</cite>
-
-Dans la bibliographie : les références sont classées par **ordre d’apparition dans le texte**.
-
-><span style="color:#0000CD;">[ZwVH1983]</span> Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
->
-><span style="color:#0000CD;">[vaHV1991]</span> van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
-
-Un seul style correspond à ce modèle dans l'entrepôt des styles, le style [DIN 1505-2 (alphanumeric, German)](https://www.zotero.org/styles/din-1505-2-alphanumeric).
-Il présente 2 limites :
-
-* il est monolingue en allemand,
-* le schéma de construction du label ne peut pas être modifié.
-
-Un label personnalisé peut être défini, mais cela devra être fait manuellement pour chaque référence.
-
-* Pour chaque référence le label à utiliser devra être indiqué dans le champ _Extra_ de la notice Zotero, sous la forme : `citation-label: valeur_du_label`.
-* Par conséquent, il faudra **désambiguïser** manuellement des labels qui seraient identiques mais se rapporteraient à des articles différents (même premier auteur et même année).
-
-#### Les styles _note_
-Dans le texte :
-
->"In the Island of St. Kilda, according to Martin, <span style="color:#0000CD;">[*]</span> the men do not acquire beards until the age of thirty or upwards, and even then the beards are very thin. “
->
-><span style="color:#0000CD;">[*]</span>'Voyage to St. Kilda' (3rd edit. 1753), p. 37.
-
-Dans la bibliographie : certains styles _note_ incluent une bibliographie de tous les documents cités. Les références sont en général classées **par ordre alphabétique d'auteur**.
-
-Le format du marqueur doit être paramétré dans le **traitement de texte**.
-
-**Exemple dans Word 2010**
-
-![marqueur_note_word](img/word_note.png)
-
-### Rappel 5, clarté des consignes
-Le plus difficile n'est pas forcément d'encoder le style, mais de disposer de consignes claires et précises, traduisibles dans un langage informatique.
-
-_Deux exemples : les styles Infoclio.ch et école doctorale Droit (Université de Bordeaux), qui fournissent chacun une documentation détaillée, pour une utilisation avec ou sans logiciel de gestion bibliographique._
-
-Baumann, J. (2021). Style de citation infoclio.ch. Infoclio.ch. Repéré à https://www.infoclio.ch/fr/Stylecitation
-
-URFIST de Bordeaux. (2019). Citer des références juridiques : Guide et style Zotero de l’école doctorale Droit (Université de Bordeaux). Repéré à http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/
-
-
-### Rappel 6, documentation Zotero disponible
+### Rappel 4, documentation Zotero
 
 Les styles bibliographiques sont abordés dans les pages suivantes de la documentation **utilisateur**. Si vous ne les avez pas encore consultées, c'est le moment de le faire car pour la suite nous considérons comme acquise la connaissance de leur contenu.
 
@@ -166,82 +59,73 @@ Aujourd'hui nous nous concentrerons sur ce qui relève de la documentation **dé
 
 Et commune aux 2, cette page de la base de connaissance : [Documentation Zotero : Les types de documents et les champs associés dans Zotero](https://docs.zotero-fr.org/kb/item_types_and_fields)
 
+## 2-Rappels concernant les styles
 
-## 2. Principes généraux de CSL
-### Principes du langage XML, 6 basiques de XML à connaître
-#### Principe 1. Prologue XML
+Un style bibliographique définit la façon dont les éléments bibliographiques d’un document :
 
-C'est la première ligne du fichier CSL. Il contient la déclaration XML et spécifie le codage des caractères. Il se présentera ainsi dans la plupart des cas.
+*   appels de citation,
+*   **notes** si applicable,
+*   **bibliographie**,
 
- ```
- <?xml version="1.0" encoding="utf-8"?>
- ```
+doivent être organisés et mis en forme.
 
-#### Principe 2. Eléments et hiérarchie
+On distingue différents types de style bibliographiques, correspondant à des formats de style Zotero différents. On trouve ainsi dans [le dépôt des styles Zotero](https://www.zotero.org/styles), plus de 10'000 styles regroupés en 2 grands ensembles.
 
-Les éléments sont les blocs de base avec lesquels un fichier XML est construit. Ils peuvent être imbriqués hiérarchiquement : on parle d'éléments **parent** et d'éléments **enfant**. Le premier élément est l'élément **racine** (`style` dans le langage CSL), duquel tous les éléments dépendent. On **indente** généralement les éléments enfant par des espaces ou des tabulations pour faciliter la compréhension.
+*   Les styles _**in-text**_, dans lesquels un appel de citation dans le texte renvoie à une entrée de la bibliographie : on distingue principalement les styles **numériques** (ex: Vancouver) et **auteur-date** (ou Harvard).
+*  Les styles _**note**_, dans lesquels un marqueur (symbole, nombre, etc.) pointe vers une note de bas de page ou de fin, qui permet d’identifier le document cité.
 
-Chaque élément est introduit par une balise `<ouvrante>` et clos par une balise `</fermante>`, ou une barre oblique s'il n'a pas de contenu textuel ou ne contient pas d'élément enfant. Toute balise ouverte doit impérativement être fermée.
+_Chaque type de style a sa logique propre, il peut être tentant de les mélanger, mais cela peut (souvent) aboutir à un résultat incohérent ou difficile à comprendre._
 
-Ex:
-```
-<element parent>
-      <element enfant1 attribut="valeur"/>
-      <element enfant2> text </element enfant2>
-</element parent>
-```
+### Les styles  numériques
 
-#### Principe 3. Attributs et contenu de l’élément
+Dans le texte : chaque référence citée est appelée par un **numéro**.
 
-Un élément peut être qualifié et contenir des informations de deux manières.
+>Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">[21, 22]</span>.
 
-* soit par du **contenu textuel** inséré entre la balise ouvrante et la balise fermante,
+Dans la bibliographie : les références sont classées par **ordre d’apparition dans le texte**.
 
-Ex:
-```
-<author>
-   <name>Anton Perdoncin</name>
-   <email>anton.perdoncin@gmail.com</email>
-</author>
-```
+><span style="color:#0000CD;">21\.</span> Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
+>
+><span style="color:#0000CD;">22\.</span> van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
 
-* soit par des **attributs**. Si l'ordre des attributs importe peu, une valeur doit obligatoirement être renseignée, entre guillemets.
+### Les styles  auteur-date
+Dans le texte : chaque référence citée est appelée par  **le nom de l'auteur et la date de publication**.
 
-Ex :
-```
-<link href="http://traces.revues.org" rel="documentation"/>
-```
+> Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al. 1991; Zwart et al. 1983)</span>
+>
+>Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al.; Zwart et al.)</span></cite>
 
-#### Principe 4. Echappement
+Dans la bibliographie : les références sont classées par **ordre alphabétique d'auteur**.
 
-Pour éviter toute ambiguïté dans l'écriture XML, certains caractères significatifs pour la syntaxe XML doivent être substitués par d'autres lorsqu'ils sont utilisés dans un attribut ou dans le contenu textuel d'un élément. Les séquences d'échappement sont les suivantes.
+>van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
+>
+>Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
 
-*   `&lt;` pour <
-*   `&gt;` pour >
-*   `&amp;` pour &
-*   `&apos;` pour ’
-*   `&quot;` pour "
+### Les styles _note_
+Dans le texte :
 
-#### Principe 5. Commentaires
+>"In the Island of St. Kilda, according to Martin, <span style="color:#0000CD;">[*]</span> the men do not acquire beards until the age of thirty or upwards, and even then the beards are very thin. “
+>
+><span style="color:#0000CD;">[*]</span>'Voyage to St. Kilda' (3rd edit. 1753), p. 37.
 
-Des commentaires pour expliciter des choix d'écriture ou clarifier des points peuvent être introduits sous la forme suivante : `<!-- commentaire libre à rédiger -->`. Ils seront reconnus par les applications utilisant le fichier comme du commentaire et non du code.
+Dans la bibliographie : certains styles _note_ incluent une bibliographie de tous les documents cités. Les références sont en général classées **par ordre alphabétique d'auteur**.
 
-#### Principe 6. Fichier bien formé et valide
+Le format du marqueur doit être paramétré dans le **traitement de texte**.
 
-Contrairement à HTML, XML ne pardonne aucune erreur de syntaxe. Toute erreur (oubli d'une balise, échappement incorrect, etc.) empêchera le fichier XML de fonctionner. Il convient donc de s'assurer que le fichier CSL fonctionne correctement en vérifiant qu'il est :
+**Exemple dans Word 2010**
 
-*   **bien formé**, _i. e._ qu'il respecte les règles de XML et ne contient pas d'erreur d'encodage,
-*   **valide**, _i. e._ qu'il est conforme aux règles du schéma CSL, qui décrit tous les éléments CSL, leurs attributs et leurs règles d'utilisation.
+![marqueur_note_word](img/word_note.png)
 
-Adapté de :
+### Clarté des consignes
+Le plus difficile n'est pas forcément d'encoder le style, mais de disposer de consignes claires et précises, traduisibles dans un langage informatique.
 
-Zelle, R. M. (2020). Primer - An Introduction to CSL : Understanding CSL Styles : XML Basics. Citation Style Language 1.0.1-dev documentation. Repéré à http://docs.citationstyles.org/en/stable/primer.html#xml-basics
+_Deux exemples : les styles Infoclio.ch et école doctorale Droit (Université de Bordeaux), qui fournissent chacun une documentation détaillée, pour une utilisation avec ou sans logiciel de gestion bibliographique._
 
+Baumann, J. (2021). Style de citation infoclio.ch. Infoclio.ch. https://www.infoclio.ch/fr/Stylecitation
 
-### Principes du langage CSL, le jeu des 7 erreurs
-🎰 [Jeu des 7 erreurs avec corrigé](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_7_erreurs.pdf)
+URFIST de Bordeaux. (2019). Citer des références juridiques : Guide et style Zotero de l’école doctorale Droit (Université de Bordeaux). http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/
 
-## 3. Structure d’un style CSL
+## 3-Structure d’un style CSL
 ### Structure générale d’un style CSL
 Un style CSL est structuré en plusieurs éléments.
 
@@ -339,21 +223,16 @@ Et rappelons la bonne pratique 3.
 Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. Repéré à https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
 
 
-## 4. Les outils
+## 4-Ressources et outils pour la partie pratique
 
+* Importez dans votre bibliothèque Zotero le [fichier form_urfist_csl.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl/main/docs/form_urfist_csl.rdf).
+* Installez le style [_Elsevier - Harvard (with titles)_](https://www.zotero.org/styles/elsevier-harvard).
+* Téléchargez les [consignes du style Garni](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_consignes_garni.pdf).
+* Téléchargez les [énoncés des exercices de style](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style.pdf).
 
-Importez dans votre bibliothèque Zotero le [fichier form_urfist_csl.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl/main/docs/form_urfist_csl.rdf).
-
-Installez le style [_Elsevier - Harvard (with titles)_](https://www.zotero.org/styles/elsevier-harvard).
-
-Téléchargez les [consignes du style Garni](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_consignes_garni.pdf).
-
-Téléchargez les [énoncés des exercices de style](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style.pdf).
-
-## 5. L'éditeur de styles Zotero
 Le billet du blog Zotero francophone [Quel outil pour éditer des styles CSL?](https://zotero.hypotheses.org/758) détaille les différents outils disponibles pour l'édition de styles CSL.
 
-L'éditeur visuel en ligne CSL est par aillerus présenté dans le billet du blog Zotero francophone [Apporter de petites modifications à un style bibliographique](https://zotero.hypotheses.org/3746).
+L'éditeur visuel en ligne CSL est par ailleurs présenté dans le billet du blog Zotero francophone [Apporter de petites modifications à un style bibliographique](https://zotero.hypotheses.org/3746).
 
 Aujourd'hui nous nous limitons :
 
@@ -427,11 +306,11 @@ Le validateur en ligne [http://validator.citationstyles.org/](http://validator.c
 
 L'outil de formatage en ligne [https://formatter.citationstyles.org/](https://formatter.citationstyles.org/) apportera ensuite automatiquement diverses modifications à votre code, pour que votre fichier soit conforme aux standards de l'entrepôt CSL (notamment indenter correctement votre code ou encore réordonner les éléments enfant de l'élément `info`). Cet outil contrôle également la validité de votre fichier, mais il s'arrête dès la première erreur rencontrée. Il est ainsi préférable de recourir d'abord au validateur, qui affichera lui **toutes** les erreurs de votre code.
 
+## 5-Installer un style créé avec l'éditeur de style Zotero
 
-### Avant de commencer, enregistrer un style créé avec l'_Editeur de style_ Zotero
 Une fois votre nouveau style créé, il faut générer le fichier CSL correspondant et installer ce fichier dans Zotero.
 
-#### Etape 1. Rendre son style unique pour se prémunir de l'écrasement de son style
+### Etape 1. Rendre son style unique pour se prémunir de l'écrasement de son style
 Chaque style est identifié dans l'élément `info` par :
 
 *   un nom (élément `title`),
@@ -447,18 +326,19 @@ Avant tout travail d'édition sur un style existant, modifiez le contenu de ces 
 ...
 ```
 
-#### Etape 2. Générer le fichier CSL
+### Etape 2. Générer le fichier CSL
 Le bouton _Enregistrer sous..._ de l'éditeur de style génère un fichier CSL, qu'il suffit d'enregistrer en veillant à bien spécifier l'extension **.csl** (et à ne pas laisser Windows ajouter une extension .txt).
 
 **NB** : Votre travail d'édition n'est pas sauvegardé ni enregistré tant que vous n'avez pas généré le fichier CSL.
 
-#### Etape 3. Installer le style dans Zotero
+### Etape 3. Installer le style dans Zotero
 
 Pour installer votre nouveau style, cliquez sur le bouton _+_  du _Gestionnaire de styles_ pour afficher une fenêtre de navigation vous permettant de retrouver votre fichier et de l'ouvrir.
 
 **NB** : Les styles ne sont pas synchronisés : si vous utilisez Zotero sur plusieurs ordinateurs, il vous faudra installer votre nouveau style sur tous ces ordinateurs.
 
-## 6. Modifier un style, macro simple
+## 6-Modifier une macro simple
+
 ### Exercice de style 1
 
 ✒️ _Pour cet exercice, vous travaillez en équipe avec un collègue :_
@@ -471,9 +351,9 @@ Modifiez le style _Elsevier - Harvard (with titles)_ pour que les **auteurs** so
 * Attention, il faut bien considérer à la fois les appels de citation **ET** la bibliographie.
 * Attention, certains paramétrages par défaut sont **implicites** : si on souhaite les modifier il ne faut pas seulement modifier la valeur d'un attribut mais ajouter un nouvel attribut avec la valeur appropriée.
 
-### Un peu de vocabulaire et de syntaxe pour les noms
+## 7-Focus sur les noms
 
-#### Spécifiques aux noms
+### Spécifiques aux noms
 Nous avons vu les attributs suivants dans notre exemple.
 
 *   `sort-separator` : chaîne de caractères à afficher comme délimiteur entre le nom et le prénom
@@ -485,14 +365,14 @@ Nous avons vu les attributs suivants dans notre exemple.
 
 L'élément `et-al` définit quant à lui le texte à afficher et la mise en forme à appliquer au _et al_. [Spécification CSL : élément `et-al`](http://docs.citationstyles.org/en/stable/specification.html#et-al)
 
-#### Non spécifiques aux noms mais utiles pour les noms (graisse, casse, etc.)
+### Non spécifiques aux noms mais utiles pour les noms (graisse, casse, etc.)
 Les attributs suivants permettent de modifier facilement des caractéristiques telles que la casse ou la graisse.
 
 *   `font-style="normal"`, `"italic"` ou `"oblique"`
 *   `font-variant="normal"` ou `"small-caps"`
 *   `font-weight="normal"`, `"bold"` ou `"light"`
 
-#### Modifier une partie du nom
+### Modifier une partie du nom
 Exemple : nom de famille en petites capitales et prénom en minuscules
 
 ```
@@ -503,7 +383,7 @@ Exemple : nom de famille en petites capitales et prénom en minuscules
       ...
 ```
 
-#### Définir un susbtitut au nom d'auteur
+### Définir un susbtitut au nom d'auteur
 L'élément `substitute` définit le substitut au nom de l'auteur à utiliser lorsque le champ _Auteur_ de la notice Zotero est vide. Il doit faire référence à une `macro` ou à une `variable`, on ne peut pas utiliser un élément de type `text term` ou `text value`.
 
 [Spécification CSL : élément `substitute`](http://docs.citationstyles.org/en/stable/specification.html#substitute)
@@ -527,7 +407,8 @@ Le style _Elsevier-Harvard (with titles)_ utilise :
   </macro>
 ```
 
-## 7. Modifier un style, macro conditionnelle
+## 8-Modifier une macro conditionnelle
+
 ### Exercice de style 2
 
 ✒️ _Pour cet exercice, vous travaillez en équipe avec un collègue :_
@@ -549,7 +430,7 @@ La `macro name="title"` du style est un peu plus complexe que la `macro name="au
 
 ✒️ Modifiez le style _Elsevier - Harvard (with titles)_ pour que la mise en forme des volumes, numéros et pages pour les articles de revues corresponde aux consignes du style Garni.
 
-## 8. Les différents types de condition
+## 9-Focus sur les différents types de condition
 L'élément `choose` peut avoir pour parent un autre élément que `macro` : il peut être élément enfant de l'élément `layout` pour le **paramétrage des notes** par exemple.
 
 Les différents types de condition sont exprimés par les attributs possibles pour les éléments `if` et `else-if`.
@@ -577,7 +458,7 @@ ex : `<if variable="volume" match="none">` la condition se réalise si la variab
 
 [Spécification CSL : élément `choose`](http://docs.citationstyles.org/en/stable/specification.html#choose)
 
-## 9. Les appels de citation et les notes, l'élément `citation`
+## 10-Les appels de citation et les notes
 
 ### Structure de l'élément `citation`
 L'élément `citation` permet de paramétrer les appels de citation pour les styles _**in-text**_ et les notes (de bas de page ou de fin) pour les styles **_note_**. Il comporte deux éléments.
@@ -748,7 +629,7 @@ Style [Presses Universitaires de Rennes (Français)](https://www.zotero.org/styl
   </citation>
 ```
 
-## 10. La bibliographie
+## 11-La bibliographie
 
 ### Structure de l'élément `bibliography`
 
@@ -852,7 +733,7 @@ Dans l'exemple suivant, dans la bibliographie :
   </sort>`
 ```
 
-## 11. Miscellanées
+## 12-Miscellanées
 ### Date originale
 La date originale d’un document est exprimée par une  variable de type `date`, `original-date.`
 
