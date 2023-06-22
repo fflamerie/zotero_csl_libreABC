@@ -5,7 +5,9 @@
 
 A la fin de cet atelier, vous aurez créé un style bibliographique simple, en apportant quelques modifications à un style existant.
 
-Après un rappel concernant les styles bibliographiques et leur rôle dans la rédaction bibliographique, nous aborderons de façon détaillée la structure d'un style CSL. Nous passerons également en revue les outils et ressources utiles pour créer un style CSL. Au cours de la partie pratique de création d'un style, nous verrons les différents types de modification qui peuvent être apportés à un fichier de style CSL, du simple changement de la valeur d'un attribut à la création d'une commande de mise en forme conditionnelle.
+Après un rappel concernant les styles bibliographiques et leur rôle dans la rédaction bibliographique, nous aborderons de façon détaillée la structure d'un style CSL. Nous passerons également en revue les outils et ressources utiles pour créer un style CSL.  	👉**30 minutes**
+
+Au cours de la partie pratique de création d'un style, nous verrons les différents types de modification qui peuvent être apportés à un fichier de style CSL, du simple changement de la valeur d'un attribut à la création d'une commande de mise en forme conditionnelle. 👉**60 minutes**
 
 ## Sommaire
 
@@ -31,10 +33,10 @@ Après un rappel concernant les styles bibliographiques et leur rôle dans la r�
 
 ## 1-Introduction, rappels concernant Zotero
 
-Pour davantage de détails concernant les rappels 1 à 4 ci-dessous, consultez le support de la formation Urfist Bordeaux [Gérer facilement sa bibliographie avec Zotero](https://github.com/fflamerie/zotero_gerer_biblio).
+Pour davantage de détails concernant les rappels 1 à 4 (destinés principalement aux utilisateurs de Zotero), consultez le support de la formation Urfist Bordeaux [Gérer facilement sa bibliographie avec Zotero](https://github.com/fflamerie/zotero_gerer_biblio).
 
 ### Rappel 1, le répertoire `styles`
-Où puis-je trouver les styles CSL dans Zotero ? Localiser le répertoire de données `zotero`, puis répertoire `styles`.
+Où puis-je trouver les styles CSL dans Zotero ? Localiser le répertoire de données `Zotero`, puis le répertoire `styles`.
 
 ### Rappel 2, qualité des données
 Tous les problèmes de mise en forme ne proviennent pas des styles bibliographiques, vérifiez la qualité et la complétude des données de votre bibliothèque Zotero en premier lieu !
@@ -54,8 +56,8 @@ Les styles bibliographiques sont abordés dans les pages suivantes de la documen
 
 Aujourd'hui nous nous concentrerons sur ce qui relève de la documentation **développeur**.
 
-* [Documentation Zotero dev : Les styles bibliographiques](https://www.zotero.org/support/dev/citation_styles)
-* [Documentation Zotero dev : Editer des styles CSL - Guide pas à pas](https://www.zotero.org/support/dev/citation_styles/style_editing_step-by-step)
+* [Documentation Zotero dev : Les styles bibliographiques (en anglais)](https://www.zotero.org/support/dev/citation_styles)
+* [Documentation Zotero dev : Editer des styles CSL - Guide pas à pas (en anglais)](https://www.zotero.org/support/dev/citation_styles/style_editing_step-by-step)
 
 Et commune aux 2, cette page de la base de connaissance : [Documentation Zotero : Les types de documents et les champs associés dans Zotero](https://docs.zotero-fr.org/kb/item_types_and_fields)
 
@@ -78,39 +80,41 @@ _Chaque type de style a sa logique propre, il peut être tentant de les mélange
 
 ### Les styles  numériques
 
-Dans le texte : chaque référence citée est appelée par un **numéro**.
+Dans le texte, chaque référence citée est appelée par un **numéro**.
 
 >Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">[21, 22]</span>.
 
-Dans la bibliographie : les références sont classées par **ordre d’apparition dans le texte**.
+Dans la bibliographie, les références sont classées par **ordre d’apparition dans le texte**.
 
 ><span style="color:#0000CD;">21\.</span> Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
 >
 ><span style="color:#0000CD;">22\.</span> van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
 
 ### Les styles  auteur-date
-Dans le texte : chaque référence citée est appelée par  **le nom de l'auteur et la date de publication**.
+
+Dans le texte, chaque référence citée est appelée par  **le nom de l'auteur et la date de publication**.
 
 > Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al. 1991; Zwart et al. 1983)</span>
 >
 >Yeast cells were grown at 25°C in batch cultures on 0.5% methanol for 36 hours <span style="color:#0000CD;">(van der Klei et al.; Zwart et al.)</span></cite>
 
-Dans la bibliographie : les références sont classées par **ordre alphabétique d'auteur**.
+Dans la bibliographie, les références sont généralement classées par **ordre alphabétique d'auteur**, puis par date ; d'autres critères de tri peuvent intervenir.
 
 >van der Klei IJ, Harder W, Veenhuis M (1991) Methanol metabolism in a peroxisome-deficient mutant of Hansenula polymorpha: a physiological study. Arch Microbiol 156: 15-23.
 >
 >Zwart KB, Veenhuis M, Harder W (1983) Significance of yeast peroxisomes in the metabolism of choline and ethanolamine. Antonie Van Leeuwenhoek 49: 369-385.
 
 ### Les styles _note_
-Dans le texte :
+
+Dans le texte, on ne trouve pas d'appels de citation mais des **appels de note**.
 
 >"In the Island of St. Kilda, according to Martin, <span style="color:#0000CD;">[*]</span> the men do not acquire beards until the age of thirty or upwards, and even then the beards are very thin. “
 >
 ><span style="color:#0000CD;">[*]</span>'Voyage to St. Kilda' (3rd edit. 1753), p. 37.
 
-Dans la bibliographie : certains styles _note_ incluent une bibliographie de tous les documents cités. Les références sont en général classées **par ordre alphabétique d'auteur**.
+Dans la bibliographie, es références sont en général classées **par ordre alphabétique d'auteur**  ; d'autres critères de tri peuvent intervenir. Notez que certains styles _note_ omettent la bibliographie récapitulative de tous les documents cités. .
 
-Le format du marqueur doit être paramétré dans le **traitement de texte**.
+Le format du marqueur de l'appel de note doit être paramétré dans le **traitement de texte**.
 
 **Exemple dans Word 2010**
 
@@ -133,15 +137,15 @@ Un style CSL est structuré en plusieurs éléments.
 
 *   `info` : métadonnées décrivant le style (nom, auteur, etc.) - il faut notamment modifier les éléments `title` et `id` du nouveau style que l'on crée à partir d'un autre, sinon le style créé sera écrasé lors des mises à jour du style duquel il est dérivé. [Spécification CSL : élément `info`](http://docs.citationstyles.org/en/stable/specification.html#info)
 
-*   `citation` : décrit la façon dont les citations (appels de citation pour les styles _**in text**_ ou notes pour les styles _**note**_) sont mis en forme. [Spécification CSL : élément `citation`](http://docs.citationstyles.org/en/stable/specification.html#citation)
+*   `citation` : décrit la façon dont les citations (dans le texte ou en note de bas de page) sont mises en forme. [Spécification CSL : élément `citation`](http://docs.citationstyles.org/en/stable/specification.html#citation)
 
 *   `bibliography` : décrit la façon dont la bibliographie est mise en forme. [Spécification CSL : élément `bibliography`](http://docs.citationstyles.org/en/stable/specification.html#bibliography)
 
-*   `locale` : permet de spécifier des termes, formats de date et options de mise en forme différents de ceux prévus par défaut pour la langue. [Spécification CSL : élément `locale`](http://docs.citationstyles.org/en/stable/specification.html#locale)
+*   `locale` : permet de spécifier des termes, formats de date et options de mise en forme différents de ceux prévus par défaut pour une ou plusieurs langues données. [Spécification CSL : élément `locale`](http://docs.citationstyles.org/en/stable/specification.html#locale)
 
 *   `terms` : permet la modification de chaînes de caractères spécifiques (ex. remplacer « edited by » par « ed. by »). [Spécification CSL : élément `terms`](http://docs.citationstyles.org/en/stable/specification.html#terms)
 
-*   `macro` : permet la réutilisation des règles de formatage (notamment dans `citation` et `bibliography`) et des styles plus compacts. [Spécification CSL : élément `macro`](http://docs.citationstyles.org/en/stable/specification.html#macro)
+*   `macro` : permet la réutilisation des règles de mise en forme (notamment dans `citation` et `bibliography`) et des styles plus compacts. [Spécification CSL : élément `macro`](http://docs.citationstyles.org/en/stable/specification.html#macro)
 
 Une `macro` CSL permet de définir des règles et d'attribuer à cet ensemble de règles un nom : appeler la macro en indiquant son nom exécutera la commande et appliquera les règles définies. On peut ainsi écrire une seule fois une longue séquence de paramétrage pour un élément donné, et y faire ensuite référence lorsque l'on souhaite l'appliquer.
 
@@ -151,18 +155,18 @@ L'utilisation des macro fait partie des bonnes pratiques recommandées par Sebas
 
 >Bonne pratique 2 : Utilisez abondamment les macros. Gardez les éléments `citation` et `bibliography` brefs et ne leur intégrez qu'au minimum des éléments `choose`. [Traduction libre]
 
-Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. Repéré à https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
+Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
 
 
 Retenons également la bonne pratique 3 recommandées dans ce billet, nous reviendrons sur la bonne pratique 1 un peu plus tard.
 
->Bonne pratique 3 : Utilisez des `terms` et des `labels`. N'ajoutez pas de termes ou d'expressions dans des affixes ou en utilisant `text value=`.
+>Bonne pratique 3 : Utilisez des `terms` et des `labels`. N'ajoutez pas de termes ou d'expressions dans des affixes ou en utilisant `text value=`. [Traduction libre]
 
 ### Anatomie des éléments `style` et `info`
 
 #### Type de style, l’attribut `class`
 
-#### Style agnostique du point de vue de la **langue** vs. style localisé
+#### Style agnostique du point de vue de la langue vs. style localisé
 On en parlera dans les _Miscellanées_ ; pour rendre agnostique du point de vue de la langue un style localisé, il suffit de supprimer l'attribut `default-locale`.
 
 #### Style dépendant vs. style indépendant
@@ -214,18 +218,15 @@ C'est le moment de revenir sur les bonnes pratiques d'écriture recommandées pa
 
 >Bonne pratique 1 : Préférez les `group` et les `group delimiters` aux affixes pour la ponctuation et les espaces entre les objets. [Traduction libre]
 
-Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. Repéré à https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
-
 Et rappelons la bonne pratique 3.
 
 >Bonne pratique 3 : Utilisez des `terms`et des `labels`. N'ajoutez pas de termes ou d'expressions dans des affixes ou en utilisant `text value=`. [Traduction libre]
 
-Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. Repéré à https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
-
+Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
 
 ## 4-Ressources et outils pour la partie pratique
 
-* Importez dans votre bibliothèque Zotero le [fichier form_urfist_csl.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl/main/docs/form_urfist_csl.rdf).
+* Importez dans votre bibliothèque Zotero le [fichier form_urfist_csl.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl/main/docs/form_urfist_csl.rdf). <!--A COR-->
 * Installez le style [_Elsevier - Harvard (with titles)_](https://www.zotero.org/styles/elsevier-harvard).
 * Téléchargez les [consignes du style Garni](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_consignes_garni.pdf).
 * Téléchargez les [énoncés des exercices de style](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style.pdf).
@@ -234,11 +235,11 @@ Le billet du blog Zotero francophone [Quel outil pour éditer des styles CSL?](h
 
 L'éditeur visuel en ligne CSL est par ailleurs présenté dans le billet du blog Zotero francophone [Apporter de petites modifications à un style bibliographique](https://zotero.hypotheses.org/3746).
 
-Aujourd'hui nous nous limitons :
+Aujourd'hui nous nous limitons à:
 
-* à l'éditeur de styles Zotero,
-* à l'outil de validation en ligne,
-* à l'outil de formatage en ligne.
+* l'éditeur de styles Zotero,
+* l'outil de validation en ligne,
+* l'outil de formatage en ligne.
 
 ### Les outils CSL intégrés à Zotero
 Zotero possède un outil intégré pour éditer les styles, accessible depuis les _Préférences > Citer_.
@@ -263,13 +264,13 @@ Ensuite, et surtout, assurez-vous que ces documents sont complets et exacts.
 
 Ces deux points sont tout aussi importants lorsque vous utilisez l'_Editeur de style_.
 
-Si l'_Aperçu des styles_ permet de manipuler plusieurs styles à des seules fins de visualisation, l'_Editeur de style_ se limite à l'affichage d'un seul style mais en vue de son édition.
+Si l'_Aperçu des styles_ permet de manipuler plusieurs styles à des seules fins de visualisation, l'_Editeur de style_ se limite à l'affichage d'un seul style mais en vue de sa modification.
 
 ![editeur](img/editeur_style.png)
 
 L'écran est composé de 3 zones, avec, de bas en haut :
 
-* le panneau de **prévisualisation**, dans lequel vous voyez évoluer en temps réel la mise en forme des citations et de la bibliographie au fur et à mesure des modifications que vous apportez au fichier de style,
+* le panneau de **prévisualisation**, dans lequel vous voyez évoluer en temps réel la mise en forme des citations et de la bibliographie au fur et à mesure des modifications que vous apportez au code,
 * le panneau d'**édition**,
 * la barre d'outils.
 
@@ -284,7 +285,7 @@ Error: File is not valid XML
 ```
 
 * On prévisualise en direct les modifications de paramétrage du style, et ce à partir des exemples de document de sa bibliothèque.
-* On peut tester en direct les paramétrages liés à des situations de citation particulières : ainsi lorsque l'on précise un localisateur  (menu déroulant _Page_), ou que l'on supprime le nom de l'auteur d'un appel de citation  dans un style de type auteur-date. Ou encore, dans un style de type _note_, lorsque l'on cite à plusieurs reprises la même référence (gestion des _ibid_, _op. cit._, etc. - menu déroulant _Position de la citation_).
+* On peut tester en direct les paramétrages liés à des situations de citation particulières : ainsi lorsque l'on précise un localisateur  (menu déroulant _Page_), ou que l'on omet le nom de l'auteur d'un appel de citation  dans un style de type auteur-date. Ou encore, dans un style de type _note_, lorsque l'on cite à plusieurs reprises la même référence (gestion des _ibid_, _op. cit._, etc. - menu déroulant _Position de la citation_).
 
 ![copie écran editeur_style_zotero_barre_outils](img/editeur_style_barre_outils.png)
 
@@ -295,7 +296,7 @@ Error: File is not valid XML
 
 
 ### Les outils en ligne pour valider et formater son code
-L'éditeur Zotero n'assure pas la **validation CSL**, indispensable pour installer et utiliser votre style, et bien sûr pour [le soumettre à l'entrepôt CSL](https://github.com/citation-style-language/styles/blob/master/CONTRIBUTING.md) si son champ d'application dépasse un usage personnel ou local.
+L'éditeur Zotero n'assure pas la **validation CSL**, indispensable pour installer et utiliser votre style, et bien sûr pour [le soumettre au dépôt CSL](https://github.com/citation-style-language/styles/blob/master/CONTRIBUTING.md) si son champ d'application dépasse un usage personnel ou local.
 
 Le validateur en ligne [http://validator.citationstyles.org/](http://validator.citationstyles.org/) vérifie la validité CSL de votre fichier, et surtout affiche le cas échéant de façon détaillée les erreurs à corriger.
 
@@ -304,7 +305,7 @@ Le validateur en ligne [http://validator.citationstyles.org/](http://validator.c
 
 ![valideur_1](img/csl_validate_error_1.png)
 
-L'outil de formatage en ligne [https://formatter.citationstyles.org/](https://formatter.citationstyles.org/) apportera ensuite automatiquement diverses modifications à votre code, pour que votre fichier soit conforme aux standards de l'entrepôt CSL (notamment indenter correctement votre code ou encore réordonner les éléments enfant de l'élément `info`). Cet outil contrôle également la validité de votre fichier, mais il s'arrête dès la première erreur rencontrée. Il est ainsi préférable de recourir d'abord au validateur, qui affichera lui **toutes** les erreurs de votre code.
+L'outil de formatage en ligne [https://formatter.citationstyles.org/](https://formatter.citationstyles.org/) apportera ensuite automatiquement diverses modifications à votre code, pour que votre fichier soit conforme aux standards du dépôt CSL (notamment indenter correctement votre code ou encore réordonner les éléments enfant de l'élément `info`). Cet outil contrôle également la validité de votre fichier, mais il s'arrête dès la première erreur rencontrée. Il est ainsi préférable de recourir d'abord au validateur, qui affichera lui **toutes** les erreurs de votre code.
 
 ## 5-Installer un style créé avec l'éditeur de style Zotero
 
@@ -316,7 +317,7 @@ Chaque style est identifié dans l'élément `info` par :
 *   un nom (élément `title`),
 *   et surtout un identifiant (élément `id`).
 
-Avant tout travail d'édition sur un style existant, modifiez le contenu de ces éléments pour ne pas confondre votre nouveau style avec le style dont il est dérivé, et surtout pour éviter qu'il ne soit écrasé par une mise à jour de ce dernier.
+Avant tout travail de modification d'un style existant, modifiez le contenu de ces éléments pour ne pas confondre votre nouveau style avec le style dont il est dérivé, et surtout pour éviter qu'il ne soit écrasé par une mise à jour de ce dernier.
 
 ```
 <info>
@@ -329,7 +330,7 @@ Avant tout travail d'édition sur un style existant, modifiez le contenu de ces 
 ### Etape 2. Générer le fichier CSL
 Le bouton _Enregistrer sous..._ de l'éditeur de style génère un fichier CSL, qu'il suffit d'enregistrer en veillant à bien spécifier l'extension **.csl** (et à ne pas laisser Windows ajouter une extension .txt).
 
-**NB** : Votre travail d'édition n'est pas sauvegardé ni enregistré tant que vous n'avez pas généré le fichier CSL.
+**NB** : Vos modifications ne sont pas sauvegardées ni enregistrées tant que vous n'avez pas généré le fichier CSL.
 
 ### Etape 3. Installer le style dans Zotero
 
@@ -356,11 +357,11 @@ Modifiez le style _Elsevier - Harvard (with titles)_ pour que les **auteurs** so
 ### Spécifiques aux noms
 Nous avons vu les attributs suivants dans notre exemple.
 
-*   `sort-separator` : chaîne de caractères à afficher comme délimiteur entre le nom et le prénom
-*   `delimiter` : chaîne de caractères à afficher comme délimiteur entre chaque nom d’auteur - si cet attribut  n’est pas présent, une virgule est utilisée comme délimiteur
+*   `sort-separator` : chaîne de caractères à afficher comme séparateur entre le nom et le prénom
+*   `delimiter` : chaîne de caractères à afficher comme séparateur entre chaque nom d’auteur - si cet attribut  n’est pas présent, une virgule est utilisée comme séparateur
 *   `and` : affichage du _et_ entre le pénultième et le dernier nom d’auteur - valeurs `symbol` ou `text`
 *   `initialize-with` : remplace le prénom par une initiale et par le caractère  précisé comme valeur de l'attribut - si cet attribut  n’est pas présent, les prénoms sont restitués en entier
-*   `delimiter-precedes-last` : paramétrage de l'affichage du délimiteur avant le nom du dernier auteur - valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le délimiteur n'est pas affiché, une espace lui est substituée
+*   `delimiter-precedes-last` : paramétrage de l'affichage du séparateur avant le nom du dernier auteur - valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le séparateur n'est pas affiché, une espace lui est substituée
 *   `name-as-sort-order` : affichage du nom du ou des auteurs selon l’ordre nom-prénom - valeurs `all` ou `first`
 
 L'élément `et-al` définit quant à lui le texte à afficher et la mise en forme à appliquer au _et al_. [Spécification CSL : élément `et-al`](http://docs.citationstyles.org/en/stable/specification.html#et-al)
@@ -538,7 +539,7 @@ Plusieurs attributs de l'élément `citation` permettent de définir les paramè
 *   `et-al-use-first` : nombre d’auteurs à inclure avant `et-al`
 *   `et-al-subsequent-min`  et `et-al-subsequent-use-first` : idem que les précédents, pour les références déjà citées
 *   `et-al-use-last` : remplace `et-al` par « … » et le nom du dernier auteur
-*   `delimiter-precedes-et-al` : paramétrage de l'affichage du `delimiter`avant la mention `et-al`  - valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le délimiteur n'est pas affiché, une espace lui est substituée
+*   `delimiter-precedes-et-al` : paramétrage de l'affichage du `delimiter`avant la mention `et-al`  - valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le séparateur n'est pas affiché, une espace lui est substituée
 
 ### Exercice de style 5
 ✒️Modifiez le style _Elsevier - Harvard (with titles)_ pour que la mise en forme des appels de citation corresponde aux consignes du style Garni.
@@ -644,7 +645,7 @@ Si certaines options (et donc certains attributs) sont les mêmes que pour `cita
 ✒️ Voici l'élément `bibliography` du style _Elsevier-Harvard (with titles)_.
 
 * Pouvez-vous comprendre le paramétrage défini par chacun des 3 attributs de `bibliography`?
-* Quels sont les critères de classement des références dans la bibliographie?
+* Quels sont les critères de tri des références dans la bibliographie?
 * Quel est le dernier caractère affiché dans une référence bibliographique? Est-il toujours identique? Pourquoi?
 
 ```
@@ -676,7 +677,7 @@ On retrouve les mêmes attributs que pour l'élément `citation`.
 *   `et-al-use-first` : nombre d’auteurs à inclure avant `et-al`
 *   `et-al-subsequent-min`  et `et-al-subsequent-use-first`: idem que les précédents, pour les références déjà citées
 *   `et-al-use-last` : remplace `et-al` par « … » et le nom du dernier auteur
-*   `delimiter-precedes-et-al` : paramétrage de l'affichage du délimiteur  avant la mention `et-al`- valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le délimiteur n'est pas affiché, une espace lui est substituée
+*   `delimiter-precedes-et-al` : paramétrage de l'affichage du séparateur  avant la mention `et-al`- valeurs `contextual`, `after-inverted-name`, `always` ou `never` - lorsque le séparateur n'est pas affiché, une espace lui est substituée
 
 #### Espacements
 Les attributs suivants sont applicables uniquement à l'élément `bibliography` et non à l'élément `citation`.
@@ -684,7 +685,7 @@ Les attributs suivants sont applicables uniquement à l'élément `bibliography`
 *   `hanging-indent` : retrait  par rapport à la marge
 *   `second-field-align` : `flush` ou `margin`  (`margin` : permet de placer les numéros de citation dans la marge)
 *   `entry-spacing` : espacement entre chaque entrée de la bibliographie, exprimée en nombre d'interlignes
-* `line-spacing` : valeur de l'interligne dans la bibliographie
+*  `line-spacing` : valeur de l'interligne dans la bibliographie
 
 [Spécification CSL : Whitespace](http://docs.citationstyles.org/en/stable/specification.html#whitespace)
 
