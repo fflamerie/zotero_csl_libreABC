@@ -10,7 +10,7 @@ Durée : 1h30
 * Consignes d'un style imaginaire, le style Garni 
   * [GARNI au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_consignes_garni.md)
   * [GARNI au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_consignes_garni.pdf)
-* [Bibliothèque Zotero au format RDF : kit CSL, ressources et exemples](https://raw.githubusercontent.com/fflamerie/zotero_csl_libreABC/main/docs/form_CSL.rdf)
+* [Bibliothèque Zotero au format RDF : kit CSL, ressources et exemples](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/form_CSL.rdf)
 * Enoncé des exercices de style 
   * [EXERCICES au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style.md)
   * [EXERCICES au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style.pdf)
