@@ -1,0 +1,715 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#">
+    <bib:Document rdf:about="http://www.mus.ulaval.ca/roberge/gdrm/08-codes.htm#espaces_tirets">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+            <z:Website>
+               <dc:title>Guide des difficultés de rédaction en musique</dc:title>
+            </z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roberge</foaf:surname>
+                        <foaf:givenName>Marc-André</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.mus.ulaval.ca/roberge/gdrm/08-codes.htm#espaces_tirets</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dcterms:abstract>Les tableaux de la présente page fournissent les codes numériques requis par divers moyens technologiques pour la saisie des guillemets (français, américains, anglais, allemands), des espaces, des tirets et des ligatures.</dcterms:abstract>
+        <dc:title>Codes numériques pour la saisie des signes typographiques et diacritiques et des symboles musicaux</dc:title>
+    </bib:Document>
+    <rdf:Description rdf:about="http://aurimasv.github.io/z2csl/typeMap.xml">
+        <z:itemType>document</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vinckevicius</foaf:surname>
+                        <foaf:givenName>Aurimas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://aurimasv.github.io/z2csl/typeMap.xml</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>14/07/2022</dc:date>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dcterms:abstract>Uptodate Zotero to CSL item type and field mappings generated with z2csl</dcterms:abstract>
+        <dc:title>Zotero to CSL item type and field mappings</dc:title>
+    </rdf:Description>
+    <bib:Document rdf:about="https://github.com/citation-style-language/locales/blob/master/locales-fr-FR.xml">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://github.com/citation-style-language/locales/blob/master/locales-fr-FR.xml</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dcterms:abstract>locales - Official repository for Citation Style Language (CSL) locale files.</dcterms:abstract>
+        <dc:title>CSL - locale fr-FR</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.zotero.org/support/dev/localization">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Zotero</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Zotero</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.zotero.org/support/dev/localization</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dc:title>Localization [Zotero documentation]</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="http://docs.citationstyles.org/en/stable/specification.html">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wiernik</foaf:surname>
+                        <foaf:givenName>Brenton M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bennett</foaf:surname>
+                        <foaf:givenName>Frank G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>D’Arcus</foaf:surname>
+                        <foaf:givenName>Bruce</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maier</foaf:surname>
+                        <foaf:givenName>Denis</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://docs.citationstyles.org/en/stable/specification.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-01-04</dcterms:dateSubmitted>
+        <dc:title>CSL 1.0.2 Specification</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="https://github.com/citation-style-language/styles/blob/master/CONTRIBUTING.md">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Karcher</foaf:surname>
+                        <foaf:givenName>Sebastian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wiernik</foaf:surname>
+                        <foaf:givenName>Brenton M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://github.com/citation-style-language/styles/blob/master/CONTRIBUTING.md</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dc:title>Guide to Submitting CSL Styles (and CSL Locales)</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="https://github.com/citation-style-language/styles/blob/master/STYLE_REQUIREMENTS.md#csl-style-repository-requirements">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wiernik</foaf:surname>
+                        <foaf:givenName>Brenton M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://github.com/citation-style-language/styles/blob/master/STYLE_REQUIREMENTS.md#csl-style-repository-requirements</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dc:title>CSL Style Repository Requirements</dc:title>
+    </bib:Document>
+    <rdf:Description rdf:about="https://media.readthedocs.org/pdf/citation-style-language/master/citation-style-language.pdf">
+        <z:itemType>document</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2848"/>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://media.readthedocs.org/pdf/citation-style-language/master/citation-style-language.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>19/04/2022</dc:date>
+        <dc:title>Citation Style Language Documentation - Release 1.0.1-dev</dc:title>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_2848">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Zelle - 2020 - Citation Style Language Documentation.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:BookSection rdf:about="#item_173">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>2</prism:volume>
+                <dc:title>Oeuvres complètes</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Paris</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Éditions du Seuil</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barthes</foaf:surname>
+                        <foaf:givenName>Roland</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marty</foaf:surname>
+                        <foaf:givenName>Éric</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>exemple_style_garni</dc:subject>
+        <dc:subject>exemples_CSL</dc:subject>
+        <bib:pages>828-865</bib:pages>
+        <dc:date>2002</dc:date>
+        <dc:description>original-date: 1966</dc:description>
+        <z:numberOfVolumes>5</z:numberOfVolumes>
+        <dc:title>Introduction à l’analyse structurale des récits</dc:title>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="#item_174">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>3</prism:volume>
+                <dc:title>Oeuvres complètes</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Paris</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Éditions du Seuil</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barthes</foaf:surname>
+                        <foaf:givenName>Roland</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marty</foaf:surname>
+                        <foaf:givenName>Éric</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>exemple_style_garni</dc:subject>
+        <dc:subject>exemples_CSL</dc:subject>
+        <bib:pages>52-59</bib:pages>
+        <dc:date>2002</dc:date>
+        <dc:description>original-date: 1968 original-publisher: Fayard</dc:description>
+        <z:numberOfVolumes>5</z:numberOfVolumes>
+        <dc:title>Linguistique et littérature</dc:title>
+    </bib:BookSection>
+    <bib:Book rdf:about="#item_175">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Series><dc:identifier>32</dc:identifier></bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Paris</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Gallimard</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Benveniste</foaf:surname>
+                        <foaf:givenName>Émile</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Foucault</foaf:surname>
+                        <foaf:givenName>Michel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>exemple_style_garni</dc:subject>
+        <dc:subject>exemples_CSL</dc:subject>
+        <dc:date>1966</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>I</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:description>editorial-director: Bergson || Pierre</dc:description>
+        <dc:title>Problèmes de linguistique générale</dc:title>
+    </bib:Book>
+    <bib:Book rdf:about="#item_176">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Paris</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Gallimard</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Benveniste</foaf:surname>
+                        <foaf:givenName>Émile</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>exemple_style_garni</dc:subject>
+        <dc:subject>exemples_CSL</dc:subject>
+        <dc:date>1974</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>II</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:title>Problèmes de linguistique générale</dc:title>
+    </bib:Book>
+    <bib:Document rdf:about="https://lausannecitationstyle.github.io/support/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grandjean</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rochat</foaf:surname>
+                        <foaf:givenName>Tania</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chachereau</foaf:surname>
+                        <foaf:givenName>Nicolas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://lausannecitationstyle.github.io/support/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2020</dc:date>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dcterms:abstract>Mini-site créé en 2020 par Martin GRANDJEAN et Tania ROCHAT (v1.1 DOI: 10.5281/zenodo.3887645. Style de citation bibliographique créé en 2018 par Nicolas CHACHEREAU et Martin GRANDJEAN (v1.1 2020 DOI: 10.5281/zenodo.1478505).</dcterms:abstract>
+        <dc:title>Lausanne : style bibliographique et intégration à Zotero</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="http://docs.citationstyles.org/en/stable/primer.html#xml-basics">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+            <z:Website>
+                <dc:title>Citation Style Language 1.0.1-dev documentation</dc:title>
+            </z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://docs.citationstyles.org/en/stable/primer.html#xml-basics</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dc:title>Primer - An Introduction to CSL : Understanding CSL Styles : XML Basics</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>The Zoteroist</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Karcher</foaf:surname>
+                        <foaf:givenName>Sebastian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2013-10-28</dc:date>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dc:title>Writing CSL - Features and Best Practices</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="http://validator.citationstyles.org/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>CitationStyles.org</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:contributors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fedosov</foaf:surname>
+                        <foaf:givenName>Alexander E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:contributors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://validator.citationstyles.org/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2021-11-06</dcterms:dateSubmitted>
+        <dcterms:abstract>Le validateur de style et de locale CSL vérifie les styles Citation Style Language (CSL) et les fichiers locale par rapport au schéma CSL. Il peut être utilisé pour préparer votre fichier en vue de sa soumission au dépôt de styles ou au dépôt des fichiers de locale.</dcterms:abstract>
+        <dc:title>CSL Style and Locale Validator</dc:title>
+    </bib:Document>
+    <bib:Data rdf:about="https://github.com/citation-style-language/styles">
+        <z:itemType>computerProgram</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Citation Style Language</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://github.com/citation-style-language/styles</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:description>original-date: 2010-12-16T22:46:44Z</dc:description>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <z:libraryCatalog>GitHub</z:libraryCatalog>
+        <z:programmingLanguage>Ruby</z:programmingLanguage>
+        <dc:title>Official repository for Citation Style Language (CSL) citation styles</dc:title>
+    </bib:Data>
+    <bib:Document rdf:about="https://docs.zotero-fr.org/kb/item_types_and_fields/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Zotero</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Zotero</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://docs.zotero-fr.org/kb/item_types_and_fields/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <dcterms:abstract>Cette page décrit les types de documents Zotero et les champs associés. Ces informations peuvent être utiles pour ajouter manuellement des documents dans Zotero ou sur la manière de remplir les champs pour les types de documents moins communs.</dcterms:abstract>
+        <dc:title>Les types de documents et les champs associés dans Zotero</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="http://formatter.citationstyles.org/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>CitationStyles.org</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zelle</foaf:surname>
+                        <foaf:givenName>Rintze M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>kit_CSL</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://formatter.citationstyles.org/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <dcterms:abstract>Outil de formatage du code en ligne, pour notamment réindenter facilement et rapidement le code.</dcterms:abstract>
+        <dc:title>CSL Style Formatter</dc:title>
+    </bib:Document>
+    <bib:Document rdf:about="https://zotero.hypotheses.org/758">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Le blog Zotero francophone</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Collectif</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://zotero.hypotheses.org/758</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>15/01/2018</dc:date>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <z:type>Billet</z:type>
+        <z:language>fr-FR</z:language>
+        <dcterms:abstract>We believe using a simple text editor is a good way to learn HTML. Source : W3Schools. HTML Editors. W3Schools. Repéré à https://www.w3schools.com/html/html_editors.asp Vous l’aurez compris à la lecture de cet épigraphe, nous abordons...</dcterms:abstract>
+        <dc:title>Quel outil pour éditer des styles CSL?</dc:title>
+    </bib:Document>
+    <bib:Article rdf:about="#item_1727">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>5</prism:volume>
+                <prism:number>1-2</prism:number>
+                <dc:title>Montaigne Studies</dc:title>
+                <dcterms:alternative>Mont Stud</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Céard</foaf:surname>
+                        <foaf:givenName>Jean</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>exemple_style_garni</dc:subject>
+        <bib:pages>11-26</bib:pages>
+        <dc:date>1993</dc:date>
+        <dc:title>Montaigne traducteur de Raymond Sebond</dc:title>
+    </bib:Article>
+    <bib:Document rdf:about="http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>URFIST de Bordeaux</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2841"/>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2019</dc:date>
+        <dcterms:dateSubmitted>2023-06-28</dcterms:dateSubmitted>
+        <z:language>fr-FR</z:language>
+        <dc:title>Citer des références juridiques : guide et style Zotero de l’école doctorale Droit (Université de Bordeaux)</dc:title>
+        <z:shortTitle>Citer des références juridiques</z:shortTitle>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_2841">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2021-11-06 15:55:43</dcterms:dateSubmitted>
+        <dc:title>Snapshot</dc:title>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://zotero.hypotheses.org/3746">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Le blog Zotero francophone</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chachereau</foaf:surname>
+                        <foaf:givenName>Nicolas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>ressources_csl</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://zotero.hypotheses.org/3746</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2022-02-25</dc:date>
+        <dcterms:dateSubmitted>2023-06-28 12:34:18</dcterms:dateSubmitted>
+        <z:type>Billet</z:type>
+        <z:language>fr-FR</z:language>
+        <dcterms:abstract>Pour vous, Zotero remplit bien son rôle - à un petit détail près ? Dans le dépôt des styles, vous avez sélectionné celui qui correspond le mieux à vos exigences. Il est presque parfait. Si seulement vous pouviez remplacer ce point par une virgule… Si vous vous reconnaissez dans ce portrait, ce billet vous est destiné.</dcterms:abstract>
+        <dc:title>Apporter de petites modifications à un style bibliographique</dc:title>
+    </bib:Document>
+</rdf:RDF>
