@@ -36,13 +36,15 @@ Au cours de la partie pratique de création d'un style, nous verrons les différ
 Pour davantage de détails concernant les rappels 1 à 4 (destinés principalement aux utilisateurs de Zotero), consultez le support de la formation Urfist Bordeaux [Gérer facilement sa bibliographie avec Zotero](https://github.com/fflamerie/zotero_gerer_biblio).
 
 ### Rappel 1, le répertoire `styles`
-Où puis-je trouver les styles CSL dans Zotero ? Localiser le répertoire de données `Zotero`, puis le répertoire `styles`.
+Où trouver les styles CSL dans Zotero ? Localisez le répertoire de données `Zotero`, puis le répertoire `styles`.
+
+[Documentation Zotero : Le répertoire de données Zotero](https://docs.zotero-fr.org/zotero_data)
 
 ### Rappel 2, qualité des données
 Tous les problèmes de mise en forme ne proviennent pas des styles bibliographiques, vérifiez la qualité et la complétude des données de votre bibliothèque Zotero en premier lieu !
 
 ### Rappel 3, bon usage des outils de rédaction bibliographique
-Un usage inapproprié des outils de rédaction peut être une autre source d'anomalies dans les citations ou la bibliographie. Assurez-vous ainsi d'utiliser correctement les modules pour traitement de texte, s'agissant notament de l'insertion de préfixes, suffixes et localisateurs pour les citations.
+Un usage inapproprié des outils de rédaction peut être une autre source d'anomalies dans les citations ou la bibliographie. Assurez-vous d'utiliser correctement les modules pour traitement de texte, s'agissant notament de l'insertion de préfixes, suffixes et localisateurs pour les citations.
 
 [Documentation Zotero : Utiliser le module Zotero pour Word](https://docs.zotero-fr.org/word_processor_plugin_usage)
 
@@ -112,7 +114,7 @@ Dans le texte, on ne trouve pas d'appels de citation mais des **appels de note**
 >
 ><span style="color:#0000CD;">[*]</span>'Voyage to St. Kilda' (3rd edit. 1753), p. 37.
 
-Dans la bibliographie, es références sont en général classées **par ordre alphabétique d'auteur**  ; d'autres critères de tri peuvent intervenir. Notez que certains styles _note_ omettent la bibliographie récapitulative de tous les documents cités. .
+Dans la bibliographie, les références sont en général classées **par ordre alphabétique d'auteur**  ; d'autres critères de tri peuvent intervenir. Notez que certains styles _note_ omettent la bibliographie récapitulative de tous les documents cités.
 
 Le format du marqueur de l'appel de note doit être paramétré dans le **traitement de texte**.
 
@@ -123,9 +125,9 @@ Le format du marqueur de l'appel de note doit être paramétré dans le **traite
 ### Clarté des consignes
 Le plus difficile n'est pas forcément d'encoder le style, mais de disposer de consignes claires et précises, traduisibles dans un langage informatique.
 
-_Deux exemples : les styles Infoclio.ch et école doctorale Droit (Université de Bordeaux), qui fournissent chacun une documentation détaillée, pour une utilisation avec ou sans logiciel de gestion bibliographique._
+_Deux exemples : les styles "Université de Lausanne - Histoire (Français)" et "Université de Bordeaux - École doctorale de droit (Français)", qui fournissent chacun une documentation détaillée, pour une utilisation avec ou sans logiciel de gestion bibliographique._
 
-Baumann, J. (2021). Style de citation infoclio.ch. Infoclio.ch. https://www.infoclio.ch/fr/Stylecitation
+Grandjean, M., Rochat, T., & Chachereau, N. (2020). Lausanne : Style bibliographique et intégration à Zotero. https://lausannecitationstyle.github.io/support/
 
 URFIST de Bordeaux. (2019). Citer des références juridiques : Guide et style Zotero de l’école doctorale Droit (Université de Bordeaux). http://weburfist.univ-bordeaux.fr/citer-des-references-juridiques-guide-et-style-zotero/
 
@@ -133,7 +135,7 @@ URFIST de Bordeaux. (2019). Citer des références juridiques : Guide et style
 ### Structure générale d’un style CSL
 Un style CSL est structuré en plusieurs éléments.
 
-*   `style` : élément racine - précise notamment la version de CSL, le type de style et permet des paramétrages globaux : gestion des noms à particules avec l'attribut `demote-non-dropping`, de l’indication du nombre de pages, abréviation des prénoms composés. [Spécification CSL : élément `style`](http://docs.citationstyles.org/en/stable/specification.html#the-root-element-cs-style)
+*   `style` : élément racine - précise notamment la version de CSL et le type de style ; permet des paramétrages globaux : gestion des noms à particules avec l'attribut `demote-non-dropping`, de l’indication du nombre de pages, abréviation des prénoms composés. [Spécification CSL : élément `style`](http://docs.citationstyles.org/en/stable/specification.html#the-root-element-cs-style)
 
 *   `info` : métadonnées décrivant le style (nom, auteur, etc.) - il faut notamment modifier les éléments `title` et `id` du nouveau style que l'on crée à partir d'un autre, sinon le style créé sera écrasé lors des mises à jour du style duquel il est dérivé. [Spécification CSL : élément `info`](http://docs.citationstyles.org/en/stable/specification.html#info)
 
@@ -155,8 +157,7 @@ L'utilisation des macro fait partie des bonnes pratiques recommandées par Sebas
 
 >Bonne pratique 2 : Utilisez abondamment les macros. Gardez les éléments `citation` et `bibliography` brefs et ne leur intégrez qu'au minimum des éléments `choose`. [Traduction libre]
 
-Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
-
+Karcher, S. (2013, octobre 28). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
 
 Retenons également la bonne pratique 3 recommandées dans ce billet, nous reviendrons sur la bonne pratique 1 un peu plus tard.
 
@@ -222,11 +223,12 @@ Et rappelons la bonne pratique 3.
 
 >Bonne pratique 3 : Utilisez des `terms`et des `labels`. N'ajoutez pas de termes ou d'expressions dans des affixes ou en utilisant `text value=`. [Traduction libre]
 
-Karcher, S. (2013, 28 octobre). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
+Karcher, S. (2013, octobre 28). Writing CSL - Features and Best Practices. The Zoteroist. https://zoteromusings.wordpress.com/2013/10/28/writing-csl-features-and-best-practices/
+
 
 ## 4-Ressources et outils pour la partie pratique
 
-* Importez dans votre bibliothèque Zotero le [fichier form_urfist_csl.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl/main/docs/form_urfist_csl.rdf). <!--A COR-->
+* Importez dans votre bibliothèque Zotero le [fichier form_CSL.rdf](https://raw.githubusercontent.com/fflamerie/zotero_csl_libreABC/main/docs/form_CSL.rdf)
 * Installez le style [_Elsevier - Harvard (with titles)_](https://www.zotero.org/styles/elsevier-harvard).
 * Téléchargez les [consignes du style Garni](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_consignes_garni.pdf).
 * Téléchargez les [énoncés des exercices de style](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style.pdf).

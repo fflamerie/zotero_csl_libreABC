@@ -38,9 +38,9 @@ Modifiez le style _Elsevier - Harvard (with titles)_ pour que les **auteurs** so
 
 ## Exercice de style 1-correction
 ### A modifier dans la bibliographie
-* prénom en entier = supprimer `initialize-with="." `,
-* enlever virgule entre nom et prénom = modifier valeur `sort-separator=", "` ,
-*  déduit de la mise en forme des appels de citation : remplacer `et` par `&` entre 2 auteurs = modifier valeur `delimiter-precedes-last="always"` et ajouter `and="symbol"`
+* prénom en entier = supprimer l'attribut `initialize-with="." `,
+* enlever la virgule entre le nom et le prénom = modifier la valeur de l'attribut `sort-separator=", "` ,
+*  déduit de la mise en forme des appels de citation : remplacer `et` par `&` entre 2 auteurs = modifier la valeur de l'attribut `delimiter-precedes-last="always"` et ajouter l'attribut `and="symbol"`
 
 ### Le code
 _Avant_
@@ -73,7 +73,7 @@ _Après_
 ```
 
 ### A modifier dans les appels de citation
-* & entre 2 auteurs = modifier valeur `and="text"`
+* & entre 2 auteurs = modifier la valeur de l'attribut `and="text"`
 * Voyez-vous autre chose à modifier dans cette macro?
 
 On peut supprimer l'attribut `initialize-with=". "` qui ne sert à rien, puisque toute mention de prénom est supprimée par l'attribut ` form="short" `.
@@ -120,9 +120,9 @@ La `macro name="title"` du style est un peu plus complexe que la `macro name="au
 ---
 ## Exercice de style 2-correction
 ### A modifier
-* Les titres de livre doivent être en italique = modifier le `else-if `pour les livres.
-* Les titres d'article doivent être entre guillemets = créer un `else-if ` pour les articles.
-* Les titres de chapitre doivent être entre guillemets = ajouter  au `else-if ` des articles les chapitres.
+* Les titres de livre doivent être en italique = modifier la condition `else-if `pour les livres.
+* Les titres d'article doivent être entre guillemets = créer une condition `else-if ` pour les articles.
+* Les titres de chapitre doivent être entre guillemets = ajouter à la condition `else-if ` des articles les chapitres.
 
 ### Le code
 _Avant_
@@ -275,7 +275,7 @@ Les appels de citation sont insérés :
 * séparés par une virgule : `delimiter=","`,
 * compactés lorsqu'ils sont adjacents : `collapse="citation-number"`.
 
-L'attribut `collapse` permet en effet de compacter des références adjacentes dans un même appel de citation. Ainsi, avec la valeur `"citation-number"` : [1, 2, 3] devient [1-3].
+L'attribut `collapse` permet en effet de compacter des citations adjacentes dans un même appel de citation. Ainsi, avec la valeur `"citation-number"` : [1, 2, 3] devient [1-3].
 
 ---
 <div style="page-break-after: always;"></div>
@@ -369,7 +369,7 @@ Voici l'élément `bibliography` du style _Elsevier-Harvard (with titles)_.
 ## Exercice de style 6-correction
 ### Pouvez-vous comprendre le paramétrage défini par chacun des 3 attributs de `bibliography`?
 *  `hanging-indent="true"` : la 1ère ligne est en retrait  par rapport à la marge.
-*  `entry-spacing="0"` : le entrées de la bibliographie ne sont pas séparées par un interligne supplémentaire
+*  `entry-spacing="0"` : les entrées de la bibliographie ne sont pas séparées par un interligne supplémentaire.
 * `line-spacing="1"` : l'interligne à l'intérieur d'une entrée de la bibliographie est de 1.
 
 ### Quels sont les critères de classement des références dans la bibliographie?
@@ -381,7 +381,7 @@ Les références sont classées :
 #### Quel est le dernier caractère affiché dans une entrée de la bibliographie? Est-il toujours identique? Pourquoi?
 Le dernier élément de ponctuation commun à toutes les entrées de la bibliographie est le `.`, situé avant le résultat de la `macro text="access"`.
 
-Si on reprend la` macro name="access"`, on constate ainsi que le dernier caractère affiché ne sera pas un `.`, mais un autre caractère uniquement dans le cas suivant :
+Si on reprend la` macro name="access"`, on constate que le dernier caractère affiché ne sera pas un `.`, mais un autre caractère uniquement dans le cas suivant :
 * document de type article de revue ou acte de conférence,
 * pour lequel un **DOI** est renseigné dans le champ DOI.
 
