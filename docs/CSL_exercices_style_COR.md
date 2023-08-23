@@ -69,7 +69,7 @@ _Après_
         <text macro="title"/>
       </substitute>
     </names>
-  </macro>
+</macro>
 ```
 
 ### A modifier dans les appels de citation
@@ -148,7 +148,7 @@ _Avant_
         <text variable="title"/>
       </else>
     </choose>
-  </macro>
+</macro>
 ```
 _Après_
 ```
@@ -176,7 +176,7 @@ _Après_
         <text variable="title"/>
       </else>
     </choose>
-  </macro>
+</macro>
 ```
 
 ---
@@ -218,11 +218,11 @@ _Après_
       <if type="article-journal article-magazine article-newspaper" match="any">
         <group prefix=" " delimiter=", ">
           <group delimiter=" ">
-		        <text term="volume" form="short"/>
+		      <text term="volume" form="short"/>
             <text variable="volume"/>
           </group>
   	       <group delimiter=" ">
-		          <text term="issue" form="short"/>
+		        <text term="issue" form="short"/>
               <text variable="issue"/>
           </group>
           <group delimiter=" ">
@@ -245,7 +245,7 @@ Le préfixe par défaut pour le numéro ne correspond pas aux consignes du style
     <terms>
       <term name="issue" form="short">no</term>
     </terms>
-  </locale>
+</locale>
 ```
 
 ---
@@ -261,7 +261,7 @@ Le préfixe par défaut pour le numéro ne correspond pas aux consignes du style
     <layout vertical-align="sup" delimiter=",">
       <text variable="citation-number"/>
     </layout>
-  </citation>
+</citation>
 ```
 
 Comment les appels de citation sont-ils mis en forme dans ce style?
@@ -288,7 +288,7 @@ Modifiez le style _Elsevier - Harvard (with titles)_ pour que la mise en forme d
 
 ## Exercice de style 5-correction
 ### A modifier
-Ce n'est pas explicite dans les exemples, on le déduit (peut-être à tort...) :  enlever le _et al_, pour afficher uniquement le nom du premier auteur, quel que soit le nombre d'auteurs = supprimer les 2 attributs `et-al-min="3" et-al-use-first="1"`.
+Ce n'est pas explicite dans les exemples, on le déduit (peut-être à tort...) :  enlever le _et al_, pour afficher le nom de tous les auteurs = supprimer les 2 attributs `et-al-min="3" et-al-use-first="1"`.
 
 ### Le code
 _Avant_
@@ -309,7 +309,7 @@ _Avant_
         </group>
       </group>
     </layout>
-  </citation>
+</citation>
 ```
 
 _Après_
@@ -330,7 +330,7 @@ _Après_
         </group>
       </group>
     </layout>
-  </citation>
+</citation>
 ```
 
 ---
@@ -361,7 +361,7 @@ Voici l'élément `bibliography` du style _Elsevier-Harvard (with titles)_.
       </group>
       <text macro="access" prefix=". "/>
     </layout>
-  </bibliography>
+</bibliography>
 ```
 
 ---
@@ -381,9 +381,9 @@ Les références sont classées :
 #### Quel est le dernier caractère affiché dans une entrée de la bibliographie? Est-il toujours identique? Pourquoi?
 Le dernier élément de ponctuation commun à toutes les entrées de la bibliographie est le `.`, situé avant le résultat de la `macro text="access"`.
 
-Si on reprend la` macro name="access"`, on constate que le dernier caractère affiché ne sera pas un `.`, mais un autre caractère uniquement dans le cas suivant :
-* document de type article de revue ou acte de conférence,
-* pour lequel un **DOI** est renseigné dans le champ DOI.
+Si on reprend la` macro name="access"`, on constate que le dernier caractère affiché ne sera pas un `.` si un **DOI** est renseigné dans le champ DOI.
+
+Le dernier caractère affiché est alors le dernier caractère du DOI.
 
 ```
 <macro name="access">
@@ -391,7 +391,7 @@ Si on reprend la` macro name="access"`, on constate que le dernier caractère af
       <if variable="DOI">
         <text variable="DOI" prefix="https://doi.org/"/>
       </if>
-      <else-if type="webpage">
+      <else-if type="webpage post-weblog" match="any">
         <group delimiter=" ">
           <text value="URL"/>
           <text variable="URL"/>
@@ -406,7 +406,7 @@ Si on reprend la` macro name="access"`, on constate que le dernier caractère af
         </group>
       </else-if>
     </choose>
-  </macro>
+</macro>
 ```
 
 ---
@@ -420,7 +420,7 @@ Modifiez le style _Elsevier Harvard (with titles)_ pour afficher la date origina
 ---
 
 ## Exercice de style 7-correction
-* Il faut modifier la `macro name="issued"` pour ajouter la date originale entre crochets avant la date d'édition ET afficher le suffixe utilisé pour la désambiguïsation après la date et non après la date originale
+* Il faut modifier la `macro name="issued"` pour ajouter la date originale entre crochets avant la date d'édition ET afficher le suffixe utilisé pour la désambiguïsation après la date et non après la date originale.
 * Pour ne pas afficher la date originale dans les appels de citation, il faut créer une nouvelle macro `macro name="issued-short"` et appeler cette macro dans l'élément `citation`.
 * Afin que le tri par date ne soit pas affecté dans la bibliographie, il convient de modifier également l'élément `key macro="issued"` de l'élément `bibliography`.
 
@@ -439,7 +439,7 @@ _Macro `issued` avant_
         <text term="no date" form="short"/>
       </else>
     </choose>
-  </macro>
+</macro>
 ```
 
 _Macro `issued` après_
@@ -505,8 +505,8 @@ _`citation` et `bibliography`avant_
         </group>
       </group>
     </layout>
-  </citation>
-  <bibliography hanging-indent="true" entry-spacing="0" line-spacing="1">
+</citation>
+<bibliography hanging-indent="true" entry-spacing="0" line-spacing="1">
       <sort>
         <key macro="author"/>
         <key macro="issued" sort="descending"/>
@@ -532,8 +532,8 @@ _`citation` et `bibliography`après_
         </group>
       </group>
     </layout>
-  </citation>
-  <bibliography hanging-indent="true" entry-spacing="0" line-spacing="1">
+</citation>
+<bibliography hanging-indent="true" entry-spacing="0" line-spacing="1">
       <sort>
         <key macro="author"/>
         <key macro="issued-short" sort="descending"/>
