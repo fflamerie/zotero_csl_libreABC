@@ -5,18 +5,18 @@ Atelier "Zotero : contribuez! Créer des styles bibliographiques CSL" de la [jou
 Durée : 1h30
 
 * Document de cours 
-  * [COURS au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_cours.md)
-  * [COURS au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_cours.pdf)
+  * [COURS au format html](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_cours.md)
+  * [COURS au format PDF](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_cours.pdf)
 * Consignes d'un style imaginaire, le style Garni 
-  * [GARNI au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_consignes_garni.md)
-  * [GARNI au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_consignes_garni.pdf)
+  * [GARNI au format html](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_consignes_garni.md)
+  * [GARNI au format PDF](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_consignes_garni.pdf)
 * [Bibliothèque Zotero au format RDF : kit CSL, ressources et exemples](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/form_CSL.rdf)
 * Enoncé des exercices de style 
-  * [EXERCICES au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style.md)
-  * [EXERCICES au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style.pdf)
+  * [EXERCICES au format html](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style.md)
+  * [EXERCICES au format PDF](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style.pdf)
 * Corrigé commenté des exercices de style 
-  * [EXERCICES COR au format html](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style_COR.md)
-  * [EXERCICES COR au format PDF](https://github.com/fflamerie/zotero_csl/blob/main/docs/CSL_exercices_style_COR.pdf)
+  * [EXERCICES COR au format html](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style_COR.md)
+  * [EXERCICES COR au format PDF](https://github.com/fflamerie/zotero_csl_libreABC/blob/main/docs/CSL_exercices_style_COR.pdf)
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/fr/88x31.png" /></a><br />Les supports sont mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/fr/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 3.0 France</a>.
