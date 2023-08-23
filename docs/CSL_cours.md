@@ -707,7 +707,7 @@ Dans l'exemple suivant, les livres et chapitres de livre seront tous cités en p
 ```
 <macro name="sort-key">
   <choose>
-    <if type="book bookSection" match="any">
+    <if type="book chapter" match="any">
       <text value="1"/>
     </if>
     <else-if type="article-journal" match="any">
