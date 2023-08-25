@@ -23,10 +23,11 @@ Au cours de la partie pratique de création d'un style, nous verrons les différ
 - [6-Modifier une macro simple](#6-modifier-une-macro-simple)   
 - [7-Focus sur les noms](#7-focus-sur-les-noms)   
 - [8-Modifier une macro conditionnelle](#8-modifier-une-macro-conditionnelle)   
-- [9-Focus sur les différents types de condition](#9-focus-sur-les-différents-types-de-condition)   
-- [10-Les appels de citation et les notes](#10-les-appels-de-citation-et-les-notes)   
-- [11-La bibliographie](#11-la-bibliographie)   
-- [12-Miscellanées](#12-miscellanées)   
+- [10-Focus sur les langues](#10-focus-sur-les-langues)   
+- [11-Focus sur les différents types de condition](#11-focus-sur-les-différents-types-de-condition)   
+- [12-Les appels de citation et les notes](#12-les-appels-de-citation-et-les-notes)   
+- [13-La bibliographie](#13-la-bibliographie)   
+- [14-Miscellanées](#14-miscellanées)   
 
 <!-- /MDTOC -->
 <div style="page-break-after: always;"></div>
@@ -168,7 +169,7 @@ Retenons également la bonne pratique 3 recommandées dans ce billet, nous revie
 #### Type de style, l’attribut `class`
 
 #### Style agnostique du point de vue de la langue vs. style localisé
-On en parlera dans les _Miscellanées_ ; pour rendre agnostique du point de vue de la langue un style localisé, il suffit de supprimer l'attribut `default-locale`.
+On en parlera dans le focus sur les langues ; pour rendre agnostique du point de vue de la langue un style localisé, il suffit de supprimer l'attribut `default-locale`.
 
 #### Style dépendant vs. style indépendant
 Dans un souci d'économie, certains styles sont dépendants d'un autre style. Dans ce cas, le fichier CSL se réduit à un élément `info`. La référence au style principal est indiquée par l'attribut `rel="independent-parent"`.
@@ -313,7 +314,7 @@ L'outil de formatage en ligne [https://formatter.citationstyles.org/](https://fo
 
 Une fois votre nouveau style créé, il faut générer le fichier CSL correspondant et installer ce fichier dans Zotero.
 
-### Etape 1. Rendre son style unique pour se prémunir de l'écrasement de son style
+### Rendre son style unique pour se prémunir de l'écrasement de son style
 Chaque style est identifié dans l'élément `info` par :
 
 *   un nom (élément `title`),
@@ -329,7 +330,7 @@ Avant tout travail de modification d'un style existant, modifiez le contenu de c
 ...
 ```
 
-### Etape 2. Générer le fichier CSL
+### Générer le fichier CSL
 Le bouton _Enregistrer sous..._ de l'éditeur de style génère un fichier CSL, qu'il suffit d'enregistrer en veillant à bien spécifier l'extension **.csl** (et à ne pas laisser Windows ajouter une extension .txt).
 
 **NB** : Vos modifications ne sont pas sauvegardées ni enregistrées tant que vous n'avez pas généré le fichier CSL.
@@ -433,7 +434,35 @@ La `macro name="title"` du style est un peu plus complexe que la `macro name="au
 
 ✒️ Modifiez le style _Elsevier - Harvard (with titles)_ pour que la mise en forme des volumes, numéros et pages pour les articles de revues corresponde aux consignes du style Garni.
 
-## 9-Focus sur les différents types de condition
+## 10-Focus sur les langues
+
+Comme on vient de le voir dans l'exercice 3, certains styles sont agnostiques du point de vue de la langue, d'autres sont "localisés".
+
+Dans un cas comme dans l'autre, ils utilisent par défaut des traductions communes pour les termes bibliographiques, encodées dans les fichiers `locale`. Exemple : [Fichier locale fr-FR](https://github.com/citation-style-language/locales/blob/master/locales-fr-FR.xml)
+
+Dans un cas comme dans l'autre, si les traductions par défaut ne correspondent pas aux consignes du style, il est possible de recourir à des termes autres, en les encodant dans un élément `locale` du fichier CSL.
+
+Dans un cas comme dans l'autre, limiter au maximum le recours à des `text value=" "` pour définir des chaînes de caractère et aux affixes pour paramétrer la ponctuation assure que son style soit le plus **réutilisable** possible.
+
+### Styles génériques
+Les styles agnostiques du point de vue de la langue ne comportent pas d'attribut `default-locale`. Ils peuvent être utilisés dans toutes les langues.
+
+### Styles localisés
+La localisation est encodée dans l'élément `style`, par l'attribut `default-locale`.
+
+```
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-US">
+```
+
+Les styles localisés dans une autre langue que l'anglais (`en-UK` ou `en-US`) comporte en clair dans leur intitulé la langue dans laquelle ils sont utilisables.
+
+Dans l'entrepôt des styles Zotero on peut ainsi retrouver les styles localisés dans une langue en indiquant le nom de la langue dans le formulaire de recherche : _français_ affichera tous les styles ayant un attribut `default-locale="fr-XX"`.
+
+### Dans quel cas localiser un style?
+Limiter l'utilisation d'un style à une langue déterminée permet d'éviter les erreurs de la part des utilisateurs : quelle que soit la langue par défaut de l'utilisateur, ce dernier ne pourra pas rédiger les éléments bibliographiques dans une autre langue que celle prévue par le style bibliographique. Une revue publiant des articles dans une unique langue se prémunira ainsi des erreurs de langue en localisant son style bibliographique.
+
+
+## 11-Focus sur les différents types de condition
 L'élément `choose` peut avoir pour parent un autre élément que `macro` : il peut être élément enfant de l'élément `layout` pour le **paramétrage des notes** par exemple.
 
 Les différents types de condition sont exprimés par les attributs possibles pour les éléments `if` et `else-if`.
@@ -461,7 +490,7 @@ ex : `<if variable="volume" match="none">` la condition se réalise si la variab
 
 [Spécification CSL : élément `choose`](http://docs.citationstyles.org/en/stable/specification.html#choose)
 
-## 10-Les appels de citation et les notes
+## 12-Les appels de citation et les notes
 
 ### Structure de l'élément `citation`
 L'élément `citation` permet de paramétrer les appels de citation pour les styles _**in-text**_ et les notes (de bas de page ou de fin) pour les styles **_note_**. Il comporte deux éléments.
@@ -632,7 +661,7 @@ Style [Presses Universitaires de Rennes (Français)](https://www.zotero.org/styl
   </citation>
 ```
 
-## 11-La bibliographie
+## 13-La bibliographie
 
 ### Structure de l'élément `bibliography`
 
@@ -684,7 +713,7 @@ On retrouve les mêmes attributs que pour l'élément `citation`.
 #### Espacements
 Les attributs suivants sont applicables uniquement à l'élément `bibliography` et non à l'élément `citation`.
 
-*   `hanging-indent` : retrait  par rapport à la marge
+*   `hanging-indent` : applique un retrait suspendu à chaque entrée de la bibliographie
 *   `second-field-align` : `flush` ou `margin`  (`margin` : permet de placer les numéros de citation dans la marge)
 *   `entry-spacing` : espacement entre chaque entrée de la bibliographie, exprimée en nombre d'interlignes
 *  `line-spacing` : valeur de l'interligne dans la bibliographie
@@ -736,7 +765,7 @@ Dans l'exemple suivant, dans la bibliographie :
   </sort>`
 ```
 
-## 12-Miscellanées
+## 14-Miscellanées
 ### Date originale
 La date originale d’un document est exprimée par une  variable de type `date`, `original-date.`
 
@@ -753,32 +782,6 @@ La date originale doit être saisie dans le champ _Extra_ de la notice Zotero, s
 #### Exercice de style date originale
 
 ✒️Modifiez le style _Elsevier Harvard (with titles)_ pour afficher la date originale selon les consignes du style Garni.
-
-### Langues
-Certains styles sont agnostiques du point de vue de la langue, d'autres sont "localisés".
-
-Dans un cas comme dans l'autre, ils utilisent par défaut des traductions communes pour les termes bibliographiques, encodées dans les fichiers `locale`. Exemple : [Fichier locale fr-FR](https://github.com/citation-style-language/locales/blob/master/locales-fr-FR.xml)
-
-Dans un cas comme dans l'autre, si les traductions par défaut ne correspondent pas aux consignes du style, il est possible de recourir à des termes autres, en les encodant dans un élément `locale` du fichier CSL (voir _supra_ exemple de l'abréviation de numéro pour le style Garni).
-
-Dans un cas comme dans l'autre, limiter au maximum le recours à des `text value=" "` pour définir des chaînes de caractère et aux affixes pour paramétrer la ponctuation assure que son style soit le plus **réutilisable** possible.
-
-#### Styles génériques
-Les styles agnostiques du point de vue de la langue ne comportent pas d'attribut `default-locale`. Ils peuvent être utilisés dans toutes les langues.
-
-#### Styles localisés
-Comme nous l'avons vu, la localisation est encodée dans l'élément `style`, par l'attribut `default-locale`.
-
-```
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-US">
-```
-
-Les styles non localisés en `en-` comporte en clair dans leur intitulé la langue dans laquelle ils sont utilisables.
-
-Dans l'entrepôt des styles Zotero on peut retrouver les styles localisés dans une langue en indiquant le nom de la langue dans le formulaire de recherche : _français_ affichera ainsi tous les styles ayant un attribut `default-locale="fr-XX"`.
-
-##### Dans quel cas localiser un style?
-Limiter l'utilisation d'un style à une langue déterminée permet d'éviter les erreurs de la part des utilisateurs : quelle que soit la langue par défaut de l'utilisateur, ce dernier ne pourra pas rédiger les éléments bibliographiques dans une autre langue que celle prévue par le style bibliographique. Une revue publiant des articles dans une unique langue se prémunira ainsi des erreurs de langue en localisant son style bibliographique.
 
 ### Rechercher un style à partir de caractéristiques précises
 [L'entrepôt des styles Zotero](https://www.zotero.org/styles) vous permet de naviguer dans les styles existants par des facettes portant sur :

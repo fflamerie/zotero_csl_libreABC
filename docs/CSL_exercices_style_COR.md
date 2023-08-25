@@ -193,7 +193,8 @@ Modifiez le style _Elsevier - Harvard (with titles)_ pour que la mise en forme d
 * Ajouter le préfixe `vol.`
 * Ajouter le numéro précédé du préfixe `no`
 * Ajouter le préfixe `p.`
-* ... sans oublier la ponctuation!
+* sans oublier la ponctuation,
+* ... ni la langue!
 
 ### Le code
 _Avant_
@@ -238,7 +239,33 @@ Le résultat est presque satisfaisant.
 
 Que reste-t-il à corriger?
 
-Le préfixe par défaut pour le numéro ne correspond pas aux consignes du style Garni. Pour le modifier tout en respectant au mieux les règles d'écriture CSL, nous allons ajouter après l'élément `info` un élément `locale`.
+Le préfixe par défaut pour le **numéro** ne correspond pas aux consignes du style Garni.
+
+Une première étape est de modifier la localisation du style : le style _Elsevier - Harvard (with titles)_ est localisé en anglais, aussi ce sont les termes anglais par défaut qui s'appliquent.
+
+Localiser le style en français ou  le rendre générique permet de vérifier si le terme par défaut en français pour le numéro correspond à celui souhaité.
+
+_Avant_
+
+```
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-US">
+```
+
+_Après : style localisé en français_
+
+```
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="fr-FR">
+```
+
+_Après : style générique_
+
+```
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
+```
+
+On constate que le terme par défaut en français ne correspond toujours pas au résultat souhaité.
+
+Pour le modifier tout en respectant au mieux les règles d'écriture CSL, nous allons ajouter après l'élément `info` un élément `locale`.
 
 ```
 <locale xml:lang="fr">
@@ -368,7 +395,7 @@ Voici l'élément `bibliography` du style _Elsevier-Harvard (with titles)_.
 
 ## Exercice de style 6-correction
 ### Pouvez-vous comprendre le paramétrage défini par chacun des 3 attributs de `bibliography`?
-*  `hanging-indent="true"` : la 1ère ligne est en retrait  par rapport à la marge.
+*  `hanging-indent="true"` : un retrait suspendu est appliqué pour chaque entreé de la bibliographie.
 *  `entry-spacing="0"` : les entrées de la bibliographie ne sont pas séparées par un interligne supplémentaire.
 * `line-spacing="1"` : l'interligne à l'intérieur d'une entrée de la bibliographie est de 1.
 
@@ -420,7 +447,7 @@ Modifiez le style _Elsevier Harvard (with titles)_ pour afficher la date origina
 ---
 
 ## Exercice de style 7-correction
-* Il faut modifier la `macro name="issued"` pour ajouter la date originale entre crochets avant la date d'édition ET afficher le suffixe utilisé pour la désambiguïsation après la date et non après la date originale.
+* Il faut modifier la `macro name="issued"` pour ajouter la date originale entre crochets avant la date d'édition ET afficher le suffixe utilisé pour la désambiguïsation après la date (ou son substitut s. d.) et non après la date originale.
 * Pour ne pas afficher la date originale dans les appels de citation, il faut créer une nouvelle macro `macro name="issued-short"` et appeler cette macro dans l'élément `citation`.
 * Afin que le tri par date ne soit pas affecté dans la bibliographie, il convient de modifier également l'élément `key macro="issued"` de l'élément `bibliography`.
 
@@ -452,18 +479,16 @@ _Macro `issued` après_
           <date variable="original-date">
             <date-part name="year" prefix="[" suffix="]"/>
           </date>
-          <group>
           <date variable="issued">
             <date-part name="year"/>
           </date>
-          <text variable="year-suffix"/>
         </group>
-        </group>
-      </if>
-      <else>
+    </if>
+    <else>
         <text term="no date" form="short"/>
-      </else>
-    </choose>
+    </else>
+  </choose>
+  <text variable="year-suffix"/>
 </macro>
 ```
 
@@ -473,17 +498,15 @@ _Macro `issued-short`_
 <macro name="issued-short">
     <choose>
       <if variable="issued">
-        <group>
         <date variable="issued">
           <date-part name="year"/>
         </date>
-        <text variable="year-suffix"/>
-      </group>
       </if>
       <else>
         <text term="no date" form="short"/>
       </else>
     </choose>
+  <text variable="year-suffix"/>
 </macro>
 ```
 
